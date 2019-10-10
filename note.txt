@@ -1,0 +1,48 @@
+1. pattern
+Entry point: index.js
+Main component: App.js
+Other components: Todos.js - TodoItem.js
+2. how to understand a class in ES6
+class = constructor function: function Fruits() {}
+3. state
+state is an object inside a component
+global states that multiple components can access
+4. props
+*pass state from parent to child using props, could be string/property {this.state.name}/mehthod {this.method}
+child is only used to receive props
+*child updates parent's state: pass event listener function from parent to child, inside setState()
+pass id up using bind (used as event listener function's parameter)
+5. complie information - high order array methods - map() - from an old array to a new array
+*Always return an HTML element/JSX
+6. libraries
+>React
+>Redux/Context API
+>fetch API/Axios 
+eg:
+axios.get(url).then(res => {this.setState({todos: res.data})}) //will return a promise
+axios.post(url, an object with data).then(res => {this.setState({todos: [...this.state.todos, res.data]})})
+>Styled components: write CSS in JavaScript
+eg:
+const Button = styled.button`
+    background-color: ${props => props.primary? "red": "white"};
+    &:hover {};
+`
+<Button>Normal</Button>
+<Button primary>Primary</Button>
+>UUID
+eg:
+uuid.v4();
+>React Router
+eg:
+<Router> <Route path="/about" component={About}> <Link to="/about">
+
+7. no more bind(this)
+event listener function using arrow function
+eg:
+handleChange = e => {}
+8. destructure
+const {id, title, completed} = this.props.todo;
+9. spread operator
+arr1 = [...arr, 4, 5, 6]
+10. consume API
+componentDidMount()
